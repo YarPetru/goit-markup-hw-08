@@ -181,3 +181,10 @@
 
   cursor: pointer;
 }
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    padding: 40px;
+    width: 450px;
+  }
+}
