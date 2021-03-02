@@ -266,6 +266,7 @@ body {
   left: 50%;
   top: 50%;
   padding: 40px;
+  max-height: 581px;
   width: 528px;
   background-color: var(--white-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -457,7 +458,24 @@ body {
 @media screen and (max-width: 1199px) {
   .modal {
     padding: 40px;
-    width: 450px;
+    max-width: 450px;
+    max-height: 609px;
+    width: 95%;
+    height: 95%;
+    overflow: scroll;
+  }
+  .checkbox-label {
+    position: relative;
+    font-size: 12px;
+    line-height: 1.167;
+  }
+  .checkbox-text {
+    margin-left: 20px;
+  }
+  .checkbox-element {
+    position: absolute;
+    left: 0;
+    top: 50%;
   }
 }
 
@@ -517,8 +535,8 @@ body {
     position: absolute;
     top: 0;
     left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-200%);
-            transform: translateX(-50%) translateY(-200%);
+    -webkit-transform: translateX(-50%) translateY(-500%);
+            transform: translateX(-50%) translateY(-500%);
     -webkit-transition: -webkit-transform var(--duration) var(--cubic);
     transition: -webkit-transform var(--duration) var(--cubic);
     transition: transform var(--duration) var(--cubic);
@@ -1161,7 +1179,8 @@ body {
 }
 
 @media screen and (min-width: 320px) {
-  .join {
+  .footer-social,
+  .subscribe {
     margin-top: 60px;
   }
   .subscribe-mail {
@@ -1181,6 +1200,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer-social {
     margin-left: 165px;
+    margin-top: 0;
   }
 }
 
@@ -1209,14 +1229,17 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+  .subscribe {
+    margin-top: 0;
+  }
   .subscribe-mail {
     min-width: 358px;
   }
 }
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .filter {
@@ -1226,7 +1249,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .filter__item:not(:last-child) {
@@ -1276,7 +1299,7 @@ body {
 .example {
   outline: 1px solid #eeeeee;
   margin: 15px;
-  width: 370px;
+  width: 450px;
   height: 404px;
   -webkit-transition: -webkit-box-shadow var(--duration) var(--cubic);
   transition: -webkit-box-shadow var(--duration) var(--cubic);
@@ -1311,5 +1334,47 @@ body {
 .example-sort {
   font-size: 16px;
   line-height: 1.875;
+}
+
+@media screen and (max-width: 767px) {
+  .filter {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .filter__item:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-bottom: 30px;
+  }
+  .example {
+    width: 354px;
+    height: 440px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-bottom: 50px;
+  }
+  .example {
+    width: 370px;
+    height: 404px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
