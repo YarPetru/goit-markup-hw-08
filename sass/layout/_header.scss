@@ -2,11 +2,11 @@
   border-bottom: 1px solid #ececec;
 }
 
-// @media screen and (min-windth: 320px) and (max-width: 480px) {
-//   .mobile-menu {
-//     overflow: scroll;
-//   }
-// }
+@media screen and (min-windth: 320px) and (max-width: 480px) {
+  .mobile-menu {
+    overflow: auto;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .nav-list,
@@ -43,13 +43,13 @@
     transform: translateX(-50%) translateY(-500%);
     transition: transform var(--duration) var(--cubic);
 
-    min-width: 100%;
-    min-height: 100vh;
+    min-width: 100vh;
+    height: 100vh;
     padding-top: 48px;
     padding-left: 40px;
+    padding-bottom: 48px;
     background-color: var(--white-color);
-
-    overflow: scroll;
+    overflow: auto;
 
     &.is-open {
       transform: translateX(-50%) translateY(0);
