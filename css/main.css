@@ -85,6 +85,7 @@ a {
 
 @media screen and (min-width: 320px) {
   .hero .container {
+    max-width: 400px;
     padding-top: 118px;
     padding-bottom: 118px;
   }
@@ -102,7 +103,8 @@ a {
     width: 768px;
   }
   .header .container {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .footer .container {
     display: -webkit-box;
@@ -133,6 +135,7 @@ a {
         flex-wrap: nowrap;
   }
   .hero .container {
+    max-width: 696px;
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -519,6 +522,12 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
+@media screen and (min-windth: 320px) and (max-width: 480px) {
+  .mobile-menu {
+    overflow: scroll;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .nav-list,
   .contacts-list {
@@ -542,7 +551,9 @@ body {
     height: 40px;
   }
   .mobile-menu {
-    position: absolute;
+    position: fixed;
+    z-index: 100;
+    overflow: hidden;
     top: 0;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-500%);
@@ -552,7 +563,6 @@ body {
     transition: transform var(--duration) var(--cubic);
     transition: transform var(--duration) var(--cubic), -webkit-transform var(--duration) var(--cubic);
     width: 100%;
-    max-width: 480px;
     height: 100vh;
     padding-top: 48px;
     padding-left: 40px;
@@ -617,7 +627,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     margin-top: 64px;
-    width: 357px;
+    width: 100%;
   }
   .mobile-soc__link {
     font-size: 18px;
@@ -1345,7 +1355,6 @@ body {
   outline: 1px solid #eeeeee;
   margin: 15px;
   max-width: 450px;
-  height: 404px;
   -webkit-transition: -webkit-box-shadow var(--duration) var(--cubic);
   transition: -webkit-box-shadow var(--duration) var(--cubic);
   transition: box-shadow var(--duration) var(--cubic);
@@ -1413,7 +1422,6 @@ body {
   }
   .example {
     width: 354px;
-    height: 440px;
   }
 }
 
@@ -1432,7 +1440,6 @@ body {
   }
   .example {
     width: 370px;
-    height: 404px;
   }
 }
 /*# sourceMappingURL=main.css.map */
