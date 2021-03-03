@@ -522,12 +522,6 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-@media screen and (min-windth: 320px) and (max-width: 480px) {
-  .mobile-menu {
-    overflow: scroll;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .nav-list,
   .contacts-list {
@@ -561,9 +555,8 @@ body {
     transition: -webkit-transform var(--duration) var(--cubic);
     transition: transform var(--duration) var(--cubic);
     transition: transform var(--duration) var(--cubic), -webkit-transform var(--duration) var(--cubic);
-    min-width: 320px;
-    width: 100vh;
-    height: 100vh;
+    min-width: 100%;
+    min-height: 100vh;
     padding-top: 48px;
     padding-left: 40px;
     background-color: var(--white-color);
@@ -626,6 +619,8 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-top: 64px;
     width: 100%;
   }
