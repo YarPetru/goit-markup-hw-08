@@ -1382,6 +1382,13 @@ body {
 }
 
 @media screen and (min-width: 320px) and (max-width: 395px) {
+  .filter {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
   .filter__item:nth-last-child(-n + 3) {
     margin-top: 15px;
   }
