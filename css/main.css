@@ -739,6 +739,8 @@ body {
 .hero {
   background: var(--dark-background);
   background-position: 50%;
+  background-size: cover;
+  max-height: 400px;
 }
 
 .hero-button {
@@ -809,6 +811,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .hero {
+    max-height: 600px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/studio-imgs/desktop/header-img-desk.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/studio-imgs/desktop/header-img-desk.jpg");
     background-size: cover;
