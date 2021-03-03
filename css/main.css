@@ -561,6 +561,7 @@ body {
     transition: -webkit-transform var(--duration) var(--cubic);
     transition: transform var(--duration) var(--cubic);
     transition: transform var(--duration) var(--cubic), -webkit-transform var(--duration) var(--cubic);
+    min-width: 320px;
     width: 100vh;
     height: 100vh;
     padding-top: 48px;
