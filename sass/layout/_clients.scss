@@ -1,12 +1,15 @@
 .clients-list {
   display: flex;
-  flex-wrap: wrap;
   margin-top: 50px;
-  justify-content: center;
 
   &__item {
     width: 170px;
     height: 90px;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 
   &__link {
@@ -30,7 +33,25 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .clients-list {
+    flex-direction: column;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .clients-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .clients-list {
     &__item:nth-last-child(n + 2) {
       margin-bottom: 30px;
